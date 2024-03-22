@@ -37,17 +37,25 @@ android {
 }
 
 dependencies {
-
+    // Core Dependencies
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    // Google
+    implementation("com.google.android.material:material:1.11.0")
+    implementation ("com.google.android.gms:play-services-location:17.0.0")
+    implementation("com.google.android.gms:play-services-maps:17.0.0")
+    implementation ("com.google.maps.android:android-maps-utils:2.2.3")
+    implementation ("com.google.maps.android:maps-utils-ktx:3.2.0")
+
+    // Gradle Secrets Plugin
     implementation("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
+
+    // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
 }
 
 secrets {
